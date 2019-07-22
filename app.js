@@ -106,6 +106,7 @@ app.post("/recipes", function(req,res){
     });
 });
 
-server.listen(3000, process.env.IP, function(){
-    console.log("BuddyCook server started");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log("BuddyCook server started listening on port ${ PORT }");
 });
